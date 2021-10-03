@@ -22,7 +22,6 @@ public class TestBase {
     public TaskSix taskSix;
 
 
-    @BeforeEach
     public void start(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -34,7 +33,6 @@ public class TestBase {
         taskSix = PageFactory.initElements(driver,TaskSix.class);
     }
 
-    @AfterEach
     public void exit(){
         driver.quit();
     }
